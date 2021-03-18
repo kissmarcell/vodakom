@@ -1,0 +1,63 @@
+.promo {
+    margin: 0 auto;
+    width: 27%;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+    float: left;
+    /*
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+    */
+    color: black;
+    font-family: Arial;
+    line-height: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-text-stroke: 1px black;
+    /*transition: 1s;*/
+}
+
+.promo>ul {
+    list-style-type: none;
+    font-size: 25px;
+    width: 100%;
+}
+
+.promo>ul>li {
+    border: 3px solid darkgray;
+    border-radius: 18px;
+    margin: 20px 0;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.19);
+}
+
+.promo>ul>li>ul {
+    margin: 15px 0px 0px 35px;
+    text-align: left;
+    /*list-style-type: none;*/
+    font-size: 18px;
+    width: 70%;
+}
+
+
+/*
+.promo.otthoni {
+    background-image: url("../kepek/otthoni2.jpg");
+}
+
+.promo.mobil {
+    background-image: url("../kepek/mobil.jpg");
+}
+*/
+
+
+/*.promo:hover {
+    opacity: 1.0;
+    size: 110%;
+    height: 200px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
