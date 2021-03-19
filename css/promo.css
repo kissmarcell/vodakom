@@ -1,10 +1,10 @@
 .promo {
     margin: 0 auto;
-    width: 27%;
+    width: 25%;
     height: 150px;
     font-size: 30px;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     float: left;
     /*
     background-repeat: no-repeat;
@@ -24,6 +24,8 @@
     list-style-type: none;
     font-size: 25px;
     width: 100%;
+    padding:0;
+    position: static;
 }
 
 .promo>ul>li {
@@ -35,14 +37,88 @@
 }
 
 .promo>ul>li>ul {
-    margin: 15px 0px 0px 35px;
+    margin: 15px 0px 0px 15px;
     text-align: left;
     /*list-style-type: none;*/
     font-size: 18px;
     width: 70%;
 }
-
-
+h3{
+    padding:0;
+    margin:0 auto;
+}
+#myGomb {
+	box-shadow:inset 0px 0px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:10px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:9px 0px;
+    width:100%;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+#myGomb:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+#myGomb:active {
+	position:relative;
+	top:1px;
+}
+#GombWrapper{
+    border:none;
+    padding:0;
+}       
+video{
+    float:right;
+}
+section{
+    padding:50px;
+}
+.virus{
+    margin:0 auto;
+    margin-top:25px;
+    width: 80%;
+    height:200px;
+    border:2px solid black;
+    border-radius: 20px;
+    font-family:Arial;
+    background-color: white;
+}
+.bord{
+    margin:0 auto;
+    margin-top:25px;
+    height:200px;
+    background-color: #4d4dff;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    width:60px;
+    margin:0;
+    position: relative;
+    float:left;
+}
+mark{
+    background-color: #4d4dff;
+    padding:3px;
+    margin:3px;
+}
+.kep{
+    padding:5px;
+    width:50px;
+    filter:none;
+}
+.menumap2{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
 .promo.otthoni {
     background-image: url("../kepek/otthoni2.jpg");
