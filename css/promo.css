@@ -24,20 +24,16 @@
     list-style-type: none;
     font-size: 25px;
     width: 100%;
-    padding:0;
     position: static;
 }
 
 .promo>ul>li {
     border: 3px solid darkgray;
     border-radius: 18px;
-    margin: 20px 0;
-    padding: 20px 0;
     background: rgba(0, 0, 0, 0.19);
 }
 
 .promo>ul>li>ul {
-    margin: 15px 0px 0px 15px;
     text-align: left;
     /*list-style-type: none;*/
     font-size: 18px;
@@ -104,6 +100,9 @@ section{
     position: relative;
     float:left;
 }
+.virus p{
+    padding-left:70px;
+}
 mark{
     background-color: #4d4dff;
     padding:3px;
@@ -118,6 +117,34 @@ mark{
     display: block;
   margin-left: auto;
   margin-right: auto;
+}
+table{
+    width: 80%;
+    margin:0 auto;
+    padding:50px;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+tr,th{
+    padding: 15px;
+}
+td{
+    text-align: center;
+     max-width: 100px;
+     border:1px solid black;
+    border-radius: 5px;
+    
+    background-color: white;
+}
+#perc{
+    font-weight: 900;
+}
+p{
+    opacity:0.6;
+}
+iframe, video{
+  border: 30px solid transparent;
+  border-image: url(../kepek/borderimage.jpg) 30% round;
 }
 /*
 .promo.otthoni {
