@@ -3,6 +3,12 @@
     overflow: hidden;
 }
 
+.navigacio ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .navigacio a {
     float: left;
     color: #f2f2f2;
@@ -14,18 +20,19 @@
 
 .navigacio a.nav-img {
     padding: 5px 15px 3px 15px;
+    background-color: #40d657;
 }
 
 .navigacio .account {
     float: right;
 }
 
-.navigacio a:hover {
+.navigacio a:hover:not(.nav-img) {
     background-color: #ddd;
     color: black;
 }
 
 .navigacio a.active {
-    background-color: #40d657;
+    background-color: #505050;
     color: white;
 }
