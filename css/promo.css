@@ -176,7 +176,13 @@ video {
 * {
     outline: none;
 }
+@media print {  
+    p { font-size: 10pt; } 
+    video, audio, iframe { display: none; } 
+    h1, h2, h3 { page-break-after: avoid; } 
+  }
 
+  @page { margin: 0.5cm; }
 
 /*
 .promo.otthoni {
