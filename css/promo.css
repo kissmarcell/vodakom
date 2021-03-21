@@ -156,10 +156,6 @@ td {
     font-weight: 900;
 }
 
-p {
-    opacity: 0.6;
-}
-
 iframe,
 video {
     border: 10px solid transparent;
