@@ -40,6 +40,7 @@ th {
     transform: scale(1, 0.9);
     animation-name: fade;
     animation-duration: 4s;
+    font-size: 30px;
 }
 
 @keyframes fade {
