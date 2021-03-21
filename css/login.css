@@ -1,7 +1,29 @@
-figure{
-    text-align: center;
-}
-menu{
+menu,figure{
     text-align: center;
     padding:0px 180px 0px 180px;
+}
+label, input{
+    margin:5px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+    animation-name: animation;
+    transform:translatey(50px);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes animation{
+    0%{font-size: 35px;}
+    50%{font-size: 50px; 
+        transform:rotateX(180deg);}
+    100%{font-size: 35px;}
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+figure{
+  transform:skew(5deg,5deg);
 }

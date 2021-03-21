@@ -16,9 +16,27 @@ td{
     
     background-color: white;
 }
-#perc{
+.perc{
     font-weight: 900;
 }
 p{
     opacity:0.6;
+}
+td img{
+    width: 15px;
+}
+.giga{
+    width: 45px;
+}
+th::first-line{
+    font-size: 25px;
+}
+th{
+    transform:scale(1.5,1.5);
+    animation-name:fade;
+    animation-duration: 4s;
+}
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
