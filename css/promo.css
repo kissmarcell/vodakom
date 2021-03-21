@@ -1,3 +1,7 @@
+body {
+    padding: 100px 0 0 0;
+}
+
 .promo {
     margin: 0 auto;
     width: 25%;
@@ -76,6 +80,10 @@ h3 {
     top: 1px;
 }
 
+input[type="submit"] {
+    text-align: center;
+}
+
 #GombWrapper {
     border: none;
     padding: 0;
@@ -89,17 +97,23 @@ video {
     margin: 0 auto;
     margin-top: 25px;
     width: 80%;
-    height: 200px;
+    height: 230px;
     border: 2px solid black;
     border-radius: 20px;
     font-family: Arial;
     background-color: white;
 }
 
+@media screen and (max-width: 1000px) {
+    .virus {
+        font-size: 15px;
+    }
+}
+
 .bord {
     margin: 0 auto;
     margin-top: 25px;
-    height: 200px;
+    height: 230px;
     background-color: #4d4dff;
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
@@ -109,7 +123,8 @@ video {
     float: left;
 }
 
-.virus p {
+.virus p,
+.virus aside {
     padding-left: 70px;
 }
 
@@ -176,13 +191,27 @@ video {
 * {
     outline: none;
 }
-@media print {  
-    p { font-size: 10pt; } 
-    video, audio, iframe { display: none; } 
-    h1, h2, h3 { page-break-after: avoid; } 
-  }
 
-  @page { margin: 0.5cm; }
+@media print {
+    p {
+        font-size: 10pt;
+    }
+    video,
+    audio,
+    iframe {
+        display: none;
+    }
+    h1,
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@page {
+    margin: 0.5cm;
+}
+
 
 /*
 .promo.otthoni {

@@ -1,35 +1,31 @@
-
-header{
-    left:50%;
-}
-.otthoni{
-        width: 32.5%;
-        height:150px;
-        float: left;
-        text-align: center;
-        font-size: 25pt;
-        margin:35px;
-        padding: 50px;
-        background-image: url("../kepek/otthoni2.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.75;
-        color: #40d657;
-        font-family: Arial;
-        line-height: 150px;
-        border-radius: 50px;
-        cursor:pointer;
-        -webkit-text-stroke: 1px black;
-        transition: 1s;
-    }
-
-.mobil{
+.otthoni {
     width: 32.5%;
-    height:150px;
+    height: 150px;
     float: left;
     text-align: center;
     font-size: 25pt;
-    margin:35px;
+    margin: 35px;
+    padding: 50px;
+    background-image: url("../kepek/otthoni2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+    color: #40d657;
+    font-family: Arial;
+    line-height: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-text-stroke: 1px black;
+    transition: 1s;
+}
+
+.mobil {
+    width: 32.5%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    font-size: 25pt;
+    margin: 35px;
     padding: 50px;
     background-image: url("../kepek/mobil.jpg");
     background-repeat: no-repeat;
@@ -39,21 +35,24 @@ header{
     font-family: Arial;
     line-height: 150px;
     border-radius: 50px;
-    cursor:pointer;
+    cursor: pointer;
     -webkit-text-stroke: 1px black;
     transition: 1s;
 }
-body{
-    background-image: linear-gradient(to bottom right,rgb(240,255,230), rgb(230,255,220));
-    
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(240, 255, 230), rgb(230, 255, 220));
 }
-.otthoni:hover, .mobil:hover{
-    opacity:1.0;
+
+.otthoni:hover,
+.mobil:hover {
+    opacity: 1.0;
     size: 110%;
-    height:200px;
-    margin-top:30px;
+    height: 200px;
+    margin-top: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-footer{
-    position:  fixed;
+
+footer {
+    position: fixed;
 }
