@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <nav>
         <div class="navigacio">
             <ul>
                 <li>
@@ -24,12 +25,13 @@
                     </a>
                 </li>
                 <li><a href="otthoni.html">Otthoni</a></li>
-                <li><a href="mobil.html">Mobil</a></li>
+                <li><a href="mobil.html" class="aktual">Mobil</a></li>
                 <li><a class="account" href="login.html">Belépés</a></li>
             </ul>
         </div>
-
+    </nav>
     </header>
+    <main>
     <form action="megrendeles.html">
         <table>
             <tr>
@@ -38,13 +40,13 @@
                 </th>
             </tr>
             <tr>
-                <td><label for="mobil1"><b>Vobil S</b><br>
+                <td id="Vobil_S"><label for="mobil1"><b>Vobil S</b><br>
                 <span class="perc">15Ft/perc</span><br><br><br><br><br></label>
                     <p><label for="mobil1">annyit fizetsz amennyit telefonálsz</label></p>
                     <label for="mobil1"><u><b>300 Ft</b></u></label>
                     <input type="radio" id="mobil1" name="mobil">
                 </td>
-                <td>
+                <td id="Vobil_M">
                     <label for="mobil2"> <b>Vobil M</b><br>
                 <span class="perc">15Ft/perc</span><br><br><br>
                 100 perc vagy SMS<br><br></label>
@@ -52,7 +54,7 @@
                     <label for="mobil2"><u><b>600 Ft</b></u></label>
                     <input type="radio" id="mobil2" name="mobil">
                 </td>
-                <td><label for="mobil3"><b>Vobil L</b><br>
+                <td id="Vobil_L"><label for="mobil3"><b>Vobil L</b><br>
                 <span class="perc">korlátlan</span><br>
                 hálózaton belül<br><br>
                 60 perc vagy SMS<br><br></label>
@@ -60,7 +62,7 @@
                     <label for="mobil3"><u><b>1450 Ft</b></u></label>
                     <input type="radio" id="mobil3" name="mobil">
                 </td>
-                <td><label for="mobil4"><b>Vobil XL</b><br>
+                <td id="Vobil_XL"><label for="mobil4"><b>Vobil XL</b><br>
             <span class="perc">korlátlan</span><br>
                 belföldön<br><br>
                 <br><br></label>
@@ -68,7 +70,7 @@
                     <label for="mobil4"><u><b>3490 Ft</b></u></label>
                     <input type="radio" id="mobil4" name="mobil">
                 </td>
-                <td><label for="mobil5"><b>Vobil MEGA</b><br>
+                <td id="Vobil_MEGA"><label for="mobil5"><b>Vobil MEGA</b><br>
                 <span class="perc">korlátlan</span><br>
                 Bárhogyan<br><br>
                 <br></label>
@@ -131,6 +133,10 @@
             </tr>
         </table>
     </form>
+    </main>
+    <footer>
+        &copy; Magyar Vodakom Nyrt. 
+    </footer>
 </body>
 
 </html>

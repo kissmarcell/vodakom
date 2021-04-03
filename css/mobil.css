@@ -4,6 +4,7 @@ table {
     padding: 50px;
     border-collapse: separate;
     border-spacing: 15px;
+    display:table;
 }
 
 tr,

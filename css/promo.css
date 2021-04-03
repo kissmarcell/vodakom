@@ -1,7 +1,14 @@
 body {
     padding: 100px 0 0 0;
+    background-attachment: fixed;
 }
-
+.aktual,#aktual{
+    background-color: #000100;
+}
+footer{
+    text-align: center;
+    font-size: 10pt;
+}
 .promo {
     margin: 0 auto;
     width: 25%;
