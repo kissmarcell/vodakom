@@ -1,32 +1,65 @@
-td {
+body{
+    padding:0px;
+}
+.table_th,.table_td{
+    float: left;
+    margin: 0 auto;
+    width: 16%;
     text-align: center;
-    max-width: 100px;
+}
+.table_td {
+    text-align: center;
     border: 1px solid black;
     border-radius: 5px;
     background-color: white;
 }
-table {
+.main_table {
     width: 80%;
     margin: 0 auto;
     padding: 50px;
-    border-collapse: separate;
-    border-spacing: 15px;
-    display:table;
 }
-tr,th,td {
+.table_th,.table_td,.table_caption {
     padding: 15px;
+    margin: 5px;
 }
-td img {
+.table_caption{
+    text-align:center;
+}
+.table_td img {
     width: 15px;
 }
-caption {
+.table_td_gomb{
+    padding:10px;
+}
+.table_caption {
     padding: 15px;
     transform: scale(1, 0.9);
     animation-name: fade;
     animation-duration: 4s;
     font-size: 30px;
 }
-
+.table_td_csomag {
+    line-height: 40px;
+    border-radius: 15px;
+    text-align:center;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: inset 0px 0px 0px 0px #a4e271;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+    background-color: #89c403;
+}
+.table_td_otthoni{
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    float: left;
+    margin: 0 auto;
+    width: 30.8%;
+    text-align: center;
+}
 @keyframes fade {
     0% {
         opacity: 0;
