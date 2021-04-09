@@ -9,6 +9,10 @@ input {
     margin: 5px;
 }
 
+input[type=submit] {
+    margin: 0px;
+}
+
 h1 {
     text-align: center;
     font-size: 50px;
