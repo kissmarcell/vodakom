@@ -18,48 +18,54 @@
 <body>
     <header>
         <nav>
-        <div class="navigacio">
-            <ul>
-                <li>
-                    <a class="nav-img" href="index.html">
-                        <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
-                    </a>
-                </li>
-                <li><a href="otthoni.html">Otthoni</a></li>
-                <li><a href="mobil.html">Mobil</a></li>
-                <li><a class="account" href="login.html" id="aktual">Belépés</a></li>
-            </ul>
-        </div>
+            <div class="navigacio">
+                <ul>
+                    <li>
+                        <a class="nav-img" href="index.html">
+                            <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
+                        </a>
+                    </li>
+                    <li><a href="otthoni.html">Otthoni</a></li>
+                    <li><a href="mobil.html">Mobil</a></li>
+                    <li><a class="account" href="login.html" id="aktual">Belépés</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-    <form action="szerelo.html" style="float:left">
-        <figure>
-            <img src="kepek/prof.png" width="150">
-            <figcaption>Bejelentkezés</figcaption>
-        </figure>
-        <div style="text-align: right; width: 300px;">
-            <label for="user1">Felhasználónév: </label>
-            <input type="text" name="user" id="user1"><br>
-            <label for="pass1">Jelszó:</label>
-            <input type="password" name="pass" id="pass1"><br>
-        </div>
-        <input type="submit" class="myGomb" value="Bejelentkezés">
-    </form>
-    <form action="szerelo.html" style="float:right">
-        <figure>
-            <img src="kepek/prof.png" width="150">
-            <figcaption>Regisztráció</figcaption>
-        </figure>
-        <div style="text-align: right; width: 300px;">
-            <label for="user2">Felhasználónév: </label>
-            <input type="text" name="user" id="user2"><br>
-            <label for="pass">Jelszó: </label>
-            <input type="password" name="pass" id="pass"><br>
-            <input type="hidden" name="source " value="internet">
-        </div>
-        <input type="submit" class="myGomb" value="Regisztráció">
-    </form>
+        <form action="szerelo.html" style="float:left">
+            <figure>
+                <img src="kepek/prof.png" width="150">
+                <figcaption>Bejelentkezés</figcaption>
+            </figure>
+            <div style="text-align: right; width: 400px;">
+                <fieldset>
+                    <legend>Sikertelen belépés esetén: login@vodakom.hu</legend>
+                    <label for="user1">Felhasználónév: </label>
+                    <input type="text" name="user" id="user1"><br>
+                    <label for="pass1">Jelszó:</label>
+                    <input type="password" name="pass" id="pass1"><br>
+                </fieldset>
+            </div>
+            <input type="submit" class="myGomb" value="Bejelentkezés">
+        </form>
+        <form action="szerelo.html" style="float:right">
+            <figure>
+                <img src="kepek/prof.png" width="150">
+                <figcaption>Regisztráció</figcaption>
+            </figure>
+            <div style="text-align: right; width: 400px;">
+                <fieldset>
+                    <legend>Hibás adatok rögzítése esetén: registration@vodakom.hu</legend>
+                    <label for="user2">Felhasználónév: </label>
+                    <input type="text" name="user" id="user2"><br>
+                    <label for="pass">Jelszó: </label>
+                    <input type="password" name="pass" id="pass"><br>
+                    <input type="hidden" name="source" value="internet">
+                </fieldset>
+            </div>
+            <input type="submit" class="myGomb" value="Regisztráció">
+        </form>
     </main>
 </body>
 

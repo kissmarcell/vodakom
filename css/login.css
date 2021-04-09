@@ -40,3 +40,8 @@ a {
 figure {
     transform: skew(5deg, 5deg);
 }
+
+fieldset {
+    border: none;
+    position: static;
+}
