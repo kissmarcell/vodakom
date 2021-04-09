@@ -39,8 +39,20 @@ body{
     animation-duration: 4s;
     font-size: 30px;
 }
+.table_td_otthoni{
+    margin:0 auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    width: 30.8%;
+    text-align: center;
+    position: relative;
+}
+
 .table_td_csomag {
     line-height: 40px;
+    margin: 15px;
     border-radius: 15px;
     text-align:center;
     font-weight: bold;
@@ -48,18 +60,7 @@ body{
     box-shadow: inset 0px 0px 0px 0px #a4e271;
     background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
     background-color: #89c403;
-}
-.table_td_otthoni{
-    padding: 15px;
-    margin: 15px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: white;
-    float: left;
-    margin: 0 auto;
-    width: 30.8%;
-    text-align: center;
+    height: 50px;
 }
 @keyframes fade {
     0% {

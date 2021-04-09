@@ -41,7 +41,7 @@
                     <div class="table_caption"><blockquote cite="telekom.hu">V-Home szolgáltatás</blockquote></div>
                 
                     <div class="table_td_csomag"> Internet</div>
-                
+                    <div style="display:flex">
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="internet1"><b>Kb. használhatatlan</b></label></p>
                         <p><label for="internet1">Használd ki a korlátlan vezetékes internet nyújtotta lehetőségeket.</label></p>
@@ -79,9 +79,11 @@
                         <label for="internet3"><b><u>10990 Ft:</u></b> </label>
                         <input type="radio" id="internet3" name="internet" value="l">
                     </div>
+                    </div>
                     <div class="table_td_csomag">
                         Televízió
                     </div>
+                    <div style="display:flex">
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="tv1"><b>Minden ami fontos</b></label></p>
                         <p>
@@ -91,7 +93,7 @@
                             </label>
                         </p>
                         <label for="tv1"><b><u>3490 Ft:</u></b> </label>
-                        <input type="radio" id="tv1" name="tv" value="s">
+                        <input type="radio" id="tv1" name="tv" value="s"><br>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="tv2"><b>Majdnem minden</b></label></p>
@@ -115,9 +117,11 @@
                         <label for="tv3"><b><u>6990 Ft:</u></b></label>
                         <input type="radio" id="tv3" name="tv" value="l">
                     </div>
-                    <div class="table_td_csomag">
-                        Telefon
-                    </div>
+                </div>
+                <div class="table_td_csomag">
+                    Telefon
+                </div>
+                <div style="display:flex"> 
                 
                 <div class="table_td_otthoni">
                         <p class="promo-title"><label for="telefon1"><b>Csak hogy legyen</b></label></p>
@@ -153,18 +157,19 @@
                         <label for="telefon3"><b><u>3990Ft:</u></b> </label>
                         <input type="radio" id="telefon3" name="telefon" value="l">
                     </div>
-                    <div class="table_td_gomb">
-                        <input type="submit" id="myGomb" value="Megrendelem">
-                    </div>
-                    <div class="table_td_gomb">
-                        <input type="reset" id="myGomb">
-                    </div>
                 </div>
-        </form>
+                    <div class="table_td_gomb">
+                        <input type="submit" class="myGomb" value="Megrendelem">
+                    </div>
+                    <div class="table_td_gomb">
+                        <input type="reset" class="myGomb">
+                    </div>
+            </div>
+            </form>
+        </section>
         </main>
         <footer>
             &copy; Magyar Vodakom Nyrt. 
         </footer>
-    </section>
 </body>
 </html>
