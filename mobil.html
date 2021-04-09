@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/navibar.css">
     <link rel="stylesheet" href="css/promo.css">
     <link rel="stylesheet" href="css/mobil.css">
+    <link rel="stylesheet" href="css/table.css">
     <title>Vodakom</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <meta name="theme-color" content="#40d657">
@@ -34,49 +35,51 @@
     <main>
     <form action="megrendeles.html">
         <table>
+                    <caption><blockquote cite="telekom.hu">Vobil szolgáltatás</blockquote></caption>     
             <tr>
-                <th colspan="5">
-                    <blockquote cite="telekom.hu">Vobil szolgáltatás</blockquote>
-                </th>
-            </tr>
+                <th id="Vobil_S"><b>Vobil S</b><br></th>
+                <th id="Vobil_M"> <b>Vobil M</b><br></th>
+                <th id="Vobil_L"><b>Vobil L</b><br></th>
+                <th id="Vobil_XL"><b>Vobil XL</b><br></th>
+                <th id="Vobil_MEGA"><b>Vobil MEGA</b><br></th>
+            </tr>                
             <tr>
-                <td id="Vobil_S"><label for="mobil1"><b>Vobil S</b><br>
-                <span class="perc">15Ft/perc</span><br><br><br><br><br></label>
-                    <p><label for="mobil1">annyit fizetsz amennyit telefonálsz</label></p>
-                    <label for="mobil1"><u><b>300 Ft</b></u></label>
-                    <input type="radio" id="mobil1" name="mobil">
+                <td headers="Vobil_S">
+                    <label for="mobil1"><span class="perc">15Ft/perc</span><br><br><br><br><br></label>
+                        <p><label for="mobil1">annyit fizetsz amennyit telefonálsz</label></p>
+                        <label for="mobil1"><u><b>300 Ft</b></u></label>
+                        <input type="radio" id="mobil1" name="mobil">
                 </td>
-                <td id="Vobil_M">
-                    <label for="mobil2"> <b>Vobil M</b><br>
-                <span class="perc">15Ft/perc</span><br><br><br>
-                100 perc vagy SMS<br><br></label>
-                    <p><label for="mobil2">belföldön és EU roaming helyzetben</label></p>
-                    <label for="mobil2"><u><b>600 Ft</b></u></label>
-                    <input type="radio" id="mobil2" name="mobil">
+                <td headers="Vobil_M">
+                    <label for="mobil2"><span class="perc">15Ft/perc</span><br><br><br>
+                    100 perc vagy SMS<br><br></label>
+                        <p><label for="mobil2">belföldön és EU roaming helyzetben</label></p>
+                        <label for="mobil2"><u><b>600 Ft</b></u></label>
+                        <input type="radio" id="mobil2" name="mobil">
                 </td>
-                <td id="Vobil_L"><label for="mobil3"><b>Vobil L</b><br>
-                <span class="perc">korlátlan</span><br>
-                hálózaton belül<br><br>
-                60 perc vagy SMS<br><br></label>
-                    <p><label for="mobil3">belföldön és EU roaming helyzetben</label></p>
-                    <label for="mobil3"><u><b>1450 Ft</b></u></label>
-                    <input type="radio" id="mobil3" name="mobil">
+                <td headers="Vobil_L">
+                    <label for="mobil3"><span class="perc">korlátlan</span><br>
+                    hálózaton belül<br><br>
+                    60 perc vagy SMS<br><br></label>
+                        <p><label for="mobil3">belföldön és EU roaming helyzetben</label></p>
+                        <label for="mobil3"><u><b>1450 Ft</b></u></label>
+                        <input type="radio" id="mobil3" name="mobil">
                 </td>
-                <td id="Vobil_XL"><label for="mobil4"><b>Vobil XL</b><br>
-            <span class="perc">korlátlan</span><br>
-                belföldön<br><br>
-                <br><br></label>
-                    <p><label for="mobil4">Illetve EU roaming helyzetből belföldre</label></p>
-                    <label for="mobil4"><u><b>3490 Ft</b></u></label>
-                    <input type="radio" id="mobil4" name="mobil">
+                <td headers="Vobil_XL">
+                    <label for="mobil4"><span class="perc">korlátlan</span><br>
+                    belföldön<br><br>
+                    <br><br></label>
+                        <p><label for="mobil4">Illetve EU roaming helyzetből belföldre</label></p>
+                        <label for="mobil4"><u><b>3490 Ft</b></u></label>
+                        <input type="radio" id="mobil4" name="mobil">
                 </td>
-                <td id="Vobil_MEGA"><label for="mobil5"><b>Vobil MEGA</b><br>
-                <span class="perc">korlátlan</span><br>
-                Bárhogyan<br><br>
-                <br></label>
-                    <p><label for="mobil5">EU roaming helyzetben egy percért sem kell fizetnie</label></p>
-                    <label for="mobil5"><u><b>4750 Ft</b></u></label>
-                    <input type="radio" id="mobil5" name="mobil">
+                <td headers="Vobil_MEGA">
+                    <label for="mobil5"><span class="perc">korlátlan</span><br>
+                    Bárhogyan<br><br>
+                    <br></label>
+                        <p><label for="mobil5">EU roaming helyzetben egy percért sem kell fizetnie</label></p>
+                        <label for="mobil5"><u><b>4750 Ft</b></u></label>
+                        <input type="radio" id="mobil5" name="mobil">
                 </td>
             </tr>
             <tr>
@@ -130,6 +133,11 @@
             </tr>
             <tr>
                 <td colspan="5"> <input type="submit" id="myGomb" value="Megrendelem"></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <input type="reset" id="myGomb">
+                </td>
             </tr>
         </table>
     </form>
