@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/navibar.css">
     <link rel="stylesheet" href="css/promo.css">
     <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/fooldal.css">
     <title>Vodakom</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <meta name="theme-color" content="#40d657">
@@ -17,51 +18,80 @@
 <body>
     <header>
         <nav>
-        <div class="navigacio">
-            <ul>
-                <li>
-                    <a class="nav-img" class="aktual" href="index.html">
-                        <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
-                    </a>
-                </li>
-                <li><a href="otthoni.html">Otthoni</a></li>
-                <li><a href="mobil.html">Mobil</a></li>
-                <li><a class="account" href="login.html">Belépés</a></li>
-            </ul>
-        </div>
-    </nav>
+            <div class="navigacio">
+                <ul>
+                    <li>
+                        <a class="nav-img" class="aktual" href="index.html">
+                            <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
+                        </a>
+                    </li>
+                    <li><a href="otthoni.html">Otthoni</a></li>
+                    <li><a href="mobil.html">Mobil</a></li>
+                    <li><a class="account" href="login.html">Belépés</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
-    <div class="virus">
-        <div class="bord"><img class="kep" alt="warning" src="kepek/warning.png"></div>
-        <article>
-            <p><mark style="color:white"><b><cite>Fontos tudnivalók a vészhelyzet idején </cite></b></mark><br><br></p>
+        <div class="virus">
+            <div class="bord"><img class="kep" alt="warning" src="kepek/warning.png"></div>
+            <article>
+                <p><mark style="color:white"><b><cite>Fontos tudnivalók a vészhelyzet idején </cite></b></mark><br><br></p>
 
-            <p><b>Online könnyen, gyorsan és a jelenlegi helyzetben is biztonságosan tudod megrendelni szolgáltatásod és intézni ügyeid.</b> Online rendelés esetén a <wbr>házhozszállítás<wbr>, a szolgáltatás bekötése és javítása zavartalanul üzemel. 2021.
-                <em>március 8. és 22.</em> között a <strong>Vodakom üzletek csak ügyfélszolgálati tevékenység céljából tartanak nyitva.</strong></p>
-            <p>Azok a diákok és pedagógusok, akik a kormány által elrendelt digitális munkarendű alap- és középfokú oktatásban tanulnak vagy tanítanak díjmentes <wbr>otthoni internetszolgáltatásban<wbr> részesülnek.
-            </p>
-            <aside>
-                Információk a kormányrendelettel kapcsolatban <a href="https://net.jogtar.hu/jogszabaly?docid=A2000501.KOR&dbnum=1" target="_blank"><i>itt</i></a> érhetőek el.
-            </aside>
-        </article>
-    </div>
-    <img class="menumap2" src="kepek/menumap.jpg" style="width: 70%;" alt="Menu" usemap="#menumap">
+                <p><b>Online könnyen, gyorsan és a jelenlegi helyzetben is biztonságosan tudod megrendelni szolgáltatásod és intézni ügyeid.</b> Online rendelés esetén a <wbr>házhozszállítás<wbr>, a szolgáltatás bekötése és javítása zavartalanul üzemel.
+                    2021.
+                    <em>március 8. és 22.</em> között a <strong>Vodakom üzletek csak ügyfélszolgálati tevékenység céljából tartanak nyitva.</strong></p>
+                <p>Azok a diákok és pedagógusok, akik a kormány által elrendelt digitális munkarendű alap- és középfokú oktatásban tanulnak vagy tanítanak díjmentes <wbr>otthoni internetszolgáltatásban<wbr> részesülnek.
+                </p>
+                <aside>
+                    Információk a kormányrendelettel kapcsolatban <a href="https://net.jogtar.hu/jogszabaly?docid=A2000501.KOR&dbnum=1" target="_blank"><i>itt</i></a> érhetőek el.
+                </aside>
+            </article>
+        </div>
+        <img class="menumap2" src="kepek/menumap.jpg" style="width: 70%;" alt="Menu" usemap="#menumap">
 
-    <map name="menumap">
+        <map name="menumap">
   <area shape="rect" coords="100,200,460,460" href="otthoni.html" alt="Otthoni">
   <area shape="rect" coords="540,20,720,250" href="mobil.html" alt="Mobil">
 </map>
-    <section>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4n6-DLPTLjc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <video width="560" height="315" controls>
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4n6-DLPTLjc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <video width="560" height="315" controls>
             <source src="Videos/Vodafone.mp4" type="video/mp4"></video>
-    </section>
-</main>
-<footer>
-    <q cite="https://www.youtube.com/watch?v=sTymrKGVBwU" style="letter-spacing: 1px;">Három bizonyosság van az életben: a becsület, a halál és a másnaposság</q> ~ Yasuo<br>
-    &copy; Magyar Vodakom Nyrt.
-</footer>
+        </section>
+        <div>
+            <table>
+                <caption>Díjak és kedvezmények</caption>
+                <tr>
+                    <th id="muvelet">Művelet</th>
+                    <th id="osszeg">Összeg</th>
+                </tr>
+                <tr>
+                    <td headers="muvelet">Fizetési felszólító SMS / email / levél</td>
+                    <td headers="osszeg">+500 Ft / alkalom</td>
+                </tr>
+                <tr>
+                    <td headers="muvelet">Visszakapcsolás számlatartozás esetén</td>
+                    <td headers="osszeg">+12500 Ft / alkalom</td>
+                </tr>
+                <tr>
+                    <td headers="muvelet">Könyörgés telefonos ügyfélszolgálatunkon egy folyamat meggyorsításáért </td>
+                    <td headers="osszeg">+2500 Ft / alkalom</td>
+                </tr>
+                <tr>
+                    <td headers="muvelet">ELTE hallgatói jogviszony</td>
+                    <td headers="osszeg">+4700 Ft / hó</td>
+                </tr>
+                <tr>
+                    <td headers="muvelet">SZTE Webtervezés gyakorlatvezetői pozíció</td>
+                    <td headers="osszeg">-5000 Ft / hó</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <q cite="https://www.youtube.com/watch?v=sTymrKGVBwU" style="letter-spacing: 1px;">Három bizonyosság van az életben: a becsület, a halál és a másnaposság</q> ~ Yasuo<br> &copy; Magyar Vodakom Nyrt.
+    </footer>
 </body>
 
 </html>
