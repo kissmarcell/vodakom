@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+    require("misc/userManager.php");
+    $login = new UserManager();
+    if(isset($_SESSION["login"])){
+        $login = unserialize($_SESSION["login"]);
+    }
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,20 +30,37 @@
         <div class="navigacio">
             <ul>
                 <li>
-                    <a class="nav-img" href="index.html">
+                    <a class="nav-img" href="index.php">
                         <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
                     </a>
                 </li>
-                <li><a href="otthoni.html" class="aktual">Otthoni</a></li>
-                <li><a href="mobil.html">Mobil</a></li>
-                <li><a class="account" href="login.html">Belépés</a></li>
+                <li><a href="otthoni.php" class="aktual">Otthoni</a></li>
+                <li><a href="mobil.php">Mobil</a></li>
+                <?php
+                    if(isset($_SESSION["login"])){
+                        echo "<li><a class=\"account\" href=\"misc/logout.php\">Kilépés</a></li>";
+                    }
+                    else{
+                        echo "<li><a class=\"account\" href=\"login.php\">Belépés</a></li>";
+                    }
+                ?>
+                <li class="account"><a href="#">
+                    <?php
+                        if(isset($_SESSION["login"])){
+                            echo $login->username;
+                        }
+                        else{
+                            echo "Nem vagy belépve!";
+                        }
+                    ?>
+                </a></li>
             </ul>
         </div>
     </nav>
     </header>
     <main>
     <section>
-        <form action="megrendeles.html" method="get">
+        <form action="megrendeles.php" method="get">
             <div class="main_table">
                     <div class="table_caption"><blockquote cite="telekom.hu">V-Home szolgáltatás</blockquote></div>
                 
@@ -52,7 +76,7 @@
                             </label>
                         </p>
                         <label for="internet1"><b><u>3990 Ft:</u></b></label>
-                        <input type="radio" id="internet1" name="internet" value="s">
+                        <input type="radio" id="internet1" name="internet" value="s" <?=$login->checked("home", "internet", "s")?>>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="internet2"><b>Ezt úgysem választja senki</b></label></p>
@@ -64,7 +88,7 @@
                             </label>
                         </p>
                         <label for="internet2"><b><u>6990 Ft:</u></b> </label>
-                        <input type="radio" id="internet2" name="internet" value="m">
+                        <input type="radio" id="internet2" name="internet" value="m" <?=$login->checked("home", "internet", "m")?>>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="internet3"><b>Anya, <q>Fortnite</q> streamer leszek</b></label></p>
@@ -77,7 +101,7 @@
                             </label>
                         </p>
                         <label for="internet3"><b><u>10990 Ft:</u></b> </label>
-                        <input type="radio" id="internet3" name="internet" value="l">
+                        <input type="radio" id="internet3" name="internet" value="l" <?=$login->checked("home", "internet", "l")?>>
                     </div>
                     </div>
                     <div class="table_td_csomag">
@@ -93,7 +117,7 @@
                             </label>
                         </p>
                         <label for="tv1"><b><u>3490 Ft:</u></b> </label>
-                        <input type="radio" id="tv1" name="tv" value="s"><br>
+                        <input type="radio" id="tv1" name="tv" value="s" <?=$login->checked("home", "tv", "s")?>><br>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="tv2"><b>Majdnem minden</b></label></p>
@@ -104,7 +128,7 @@
                             </label>
                         </p>
                         <label for="tv2"><b><u>4990 Ft:</u></b></label>
-                        <input type="radio" id="tv2" name="tv" value="m">
+                        <input type="radio" id="tv2" name="tv" value="m" <?=$login->checked("home", "tv", "m")?>>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="tv3"> <b> Fullos</b></label></p>
@@ -115,7 +139,7 @@
                             </label>
                         </p>
                         <label for="tv3"><b><u>6990 Ft:</u></b></label>
-                        <input type="radio" id="tv3" name="tv" value="l">
+                        <input type="radio" id="tv3" name="tv" value="l" <?=$login->checked("home", "tv", "l")?>>
                     </div>
                 </div>
                 <div class="table_td_csomag">
@@ -132,7 +156,7 @@
                             </label>
                         </p>
                         <label for="telefon1"><b><u>Ingyenes:</u></b></label>
-                        <input type="radio" id="telefon1" name="telefon" value="s">
+                        <input type="radio" id="telefon1" name="telefon" value="s" <?=$login->checked("home", "telephone", "s")?>>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="telefon2"><b>Néha néha</b></label></p>
@@ -144,7 +168,7 @@
                             </label>
                         </p>
                         <label for="telefon2"><b><u>1990Ft:</u></b></label>
-                        <input type="radio" id="telefon2" name="telefon" value="m">
+                        <input type="radio" id="telefon2" name="telefon" value="m" <?=$login->checked("home", "telephone", "m")?>>
                     </div>
                     <div class="table_td_otthoni">
                         <p class="promo-title"><label for="telefon3"><b>Nagymamák kedvence</b></label></p>
@@ -155,7 +179,7 @@
                             </label>
                         </p>
                         <label for="telefon3"><b><u>3990Ft:</u></b> </label>
-                        <input type="radio" id="telefon3" name="telefon" value="l">
+                        <input type="radio" id="telefon3" name="telefon" value="l" <?=$login->checked("home", "telephone", "l")?>>
                     </div>
                 </div>
                     <div class="table_td_gomb">

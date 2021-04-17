@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+    require("misc/userManager.php");
+    if(isset($_SESSION["login"])){
+        $login = unserialize($_SESSION["login"]);
+    }
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,13 +26,32 @@
             <div class="navigacio">
                 <ul>
                     <li>
-                        <a class="nav-img aktual" href="index.html">
+                        <a class="nav-img aktual" href="index.php">
                             <img src="img/favicon/favicon-96x96.png" alt="Vodakom" title="Vodakom" height="60">
                         </a>
                     </li>
-                    <li><a href="otthoni.html">Otthoni</a></li>
-                    <li><a href="mobil.html">Mobil</a></li>
-                    <li><a class="account" href="login.html">Belépés</a></li>
+                    <li><a href="otthoni.php">Otthoni</a></li>
+                    <li><a href="mobil.php">Mobil</a></li>
+                    <li>
+                    <?php
+                        if(isset($_SESSION["login"])){
+                            echo "<a class=\"account\" href=\"misc/logout.php\">Kilépés</a>";
+                        }
+                        else{
+                            echo "<a class=\"account\" href=\"login.php\">Belépés</a>";
+                        }
+                        ?>
+                    </li>
+                    <li class="account"><a href="#">
+                    <?php
+                        if(isset($_SESSION["login"])){
+                            echo $login->username;
+                        }
+                        else{
+                            echo "Nem vagy belépve!";
+                        }
+                    ?>
+                    </a></li>
                 </ul>
             </div>
         </nav>
@@ -51,8 +75,8 @@
         <img class="menumap2" src="kepek/menumap.jpg" style="width: 70%;" alt="Menu" usemap="#menumap">
 
         <map name="menumap">
-  <area shape="rect" coords="100,200,460,460" href="otthoni.html" alt="Otthoni">
-  <area shape="rect" coords="540,20,720,250" href="mobil.html" alt="Mobil">
+  <area shape="rect" coords="100,200,460,460" href="otthoni.php" alt="Otthoni">
+  <area shape="rect" coords="540,20,720,250" href="mobil.php" alt="Mobil">
 </map>
         <section>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/4n6-DLPTLjc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -90,7 +114,7 @@
         </div>
     </main>
     <footer>
-        <q cite="https://www.youtube.com/watch?v=sTymrKGVBwU" style="letter-spacing: 1px;">Három bizonyosság van az életben: a becsület, a halál és a másnaposság</q> ~ Yasuo<br> <h5>&copy; Magyar Vodakom Nyrt.</h5>
+        <?php if(isset($_SESSION["login"])){echo "Regisztrációd időpontja: ".$login->getDate()."<br>";}?><q cite="https://www.youtube.com/watch?v=sTymrKGVBwU" style="letter-spacing: 1px;">Három bizonyosság van az életben: a becsület, a halál és a másnaposság</q> ~ Yasuo<br> <h5>&copy; Magyar Vodakom Nyrt.</h5>
     </footer>
 </body>
 

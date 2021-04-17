@@ -13,6 +13,10 @@ input[type=submit] {
     margin: 0px;
 }
 
+#profile_pic {
+    width: 165px !important;
+}
+
 h1 {
     text-align: center;
     font-size: 50px;
