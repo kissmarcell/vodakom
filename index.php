@@ -45,7 +45,7 @@
                     <li class="account"><a href="#">
                     <?php
                         if(isset($_SESSION["login"])){
-                            echo "<img style=\"margin-right: 10px\" width=\"32px\" height=\"32px\" src=\"pics/". $login->profile_pic."\">";
+                            echo "<img style=\"margin-right: 10px\" width=\"32px\" height=\"32px\" src=\"pics/". $login->getProfPic()."\">";
                             echo "<label>".$login->username."</label>";
                         }
                         else{

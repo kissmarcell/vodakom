@@ -8,12 +8,20 @@ session_start();
 
 class UserManager{
 
-    public $users;
+    public $users = "no";
     public $username = "";
-    public $profile_pic;
 
     function __construct(){
-        $this->users = unserialize(file_get_contents(__DIR__."\..\data\users.data"));
+        try{
+            if(!file_exists(__DIR__."\..\data\users.data")){
+                throw new RuntimeException("Az adatbázis nem található!");
+            }
+            $this->users = unserialize(file_get_contents(__DIR__."\..\data\users.data"));
+        }
+        catch (RuntimeException $e){
+            echo "HIBA: ".$e;
+            die();
+        }
     }
 
     function pushChanges(){
@@ -62,7 +70,7 @@ class UserManager{
             if ($image["error"] === 0) {
                 if ($image["size"] <= 31457280) {
                     $target = "../pics/" . $username.".".$extension;
-                    $this->profile_pic = $username.".".$extension;
+                    $user["profile_pic"] = $username.".".$extension;
                     move_uploaded_file($image["tmp_name"], $target);
                 }
             }
@@ -93,6 +101,7 @@ class UserManager{
     }
 
     function checked($segment, $service, $package){
+        if(!$this->username) return "";
         return ($this->getService($segment, $service) == $package) ? "checked" : "";
     }
 
@@ -111,6 +120,15 @@ class UserManager{
         foreach($this->users as $user){
             if($user["username"] == $this->username){
                 return $user["date"]->format('Y. m. d. H:i');
+            }
+        }
+    }
+
+    function getProfPic(){
+        if(!$this->users) return false;
+        foreach($this->users as $user){
+            if($user["username"] == $this->username){
+                return $user["profile_pic"];
             }
         }
     }

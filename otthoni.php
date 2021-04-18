@@ -182,12 +182,17 @@
                         <input type="radio" id="telefon3" name="telefon" value="l" <?=$login->checked("home", "telephone", "l")?>>
                     </div>
                 </div>
-                    <div class="table_td_gomb">
-                        <input type="submit" class="myGomb" value="Megrendelem">
-                    </div>
-                    <div class="table_td_gomb">
-                        <input type="reset" class="myGomb">
-                    </div>
+                <?php
+                    if($login->username){
+                        echo "<div class=\"table_td_gomb\">
+                        <input type=\"submit\" class=\"myGomb\" value=\"Megrendelem\">
+                        </div>";
+                    }
+                ?>
+                
+                <div class="table_td_gomb">
+                    <input type="reset" class="myGomb">
+                </div>
             </div>
             </form>
         </section>

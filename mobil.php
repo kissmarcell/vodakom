@@ -155,7 +155,13 @@
             <u><b>9990 Ft</b></u></label>
                     <input type="radio" id="net5" name="net" value="mega" <?=$login->checked("mobile", "data", "mega")?>>
                 </div>
-                <div class="table_td_gomb"><input type="submit" class="myGomb" value="Megrendelem"></div>
+                <?php
+                    if($login->username){
+                        echo "<div class=\"table_td_gomb\">
+                        <input type=\"submit\" class=\"myGomb\" value=\"Megrendelem\">
+                        </div>";
+                    }
+                ?>
                 <div class="table_td_gomb">
                     <input type="reset" class="myGomb">
 
