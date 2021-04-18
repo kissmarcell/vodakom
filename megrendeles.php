@@ -1,7 +1,25 @@
 <?php
-if(!isset($_SESSION["login"])){
-    header("Location: /vodakom/login.php?PHPSESSID=".session_id());
+
+    require("misc/userManager.php");
+    $login = new UserManager();
+    if(isset($_SESSION["login"])){
+        $login = unserialize($_SESSION["login"]);
+    }
+    else{
+        header("Location: /vodakom/login.php?PHPSESSID=".session_id());
+    }
+
+if($_GET["service"] == "home"){
+    if($_GET["internet"]) $login->setService("home", "internet", $_GET["internet"]);
+    if($_GET["tv"]) $login->setService("home", "tv", $_GET["tv"]);
+    if($_GET["telefon"]) $login->setService("home", "telephone", $_GET["telefon"]);
 }
+
+if($_GET["service"] == "mobile"){
+    if($_GET["mobil"]) $login->setService("mobile", "talk", $_GET["mobil"]);
+    if($_GET["net"]) $login->setService("mobile", "data", $_GET["net"]);
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -39,16 +57,22 @@ if(!isset($_SESSION["login"])){
                             echo "<li><a class=\"account\" href=\"login.php\">Belépés</a></li>";
                         }
                     ?>
-                    <li class="account"><a href="#">
+                    <li class="account">
                     <?php
                         if(isset($_SESSION["login"])){
+                            echo "<a style=\"padding:12px\" href=\"#\">";
+                            echo "<img style=\"margin-right: 10px\" width=\"40\" height=\"40\" alt=\"Profilkép\" src=\"pics/". $login->getProfPic()."\">";
+
                             echo $login->username;
+                            echo "</a>";
                         }
                         else{
+                            echo "<a href=\"#\">";
                             echo "Nem vagy belépve!";
+                            echo "</a>";
                         }
                     ?>
-                    </a></li>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -64,7 +88,7 @@ if(!isset($_SESSION["login"])){
             <input type="checkbox" id="aszf" name="aszf"><label for="aszf">
     Megrendelésével elfogadta az Általános Szerődési Feltételeinket, amiről további részletes információt sehol nem talál.</label><br> Kérjük ha rendeléssel kapcsolatos kérdése van, vagy leszeretné mondani a rendelését, kérjük keresse fel a központi ügyintézői
             telefonszámunkat ami nincs.</p><br>
-        <pre><h5>&copy; Magyar Vodakom Nyrt.</h5></pre>
+            <pre>&copy; Magyar Vodakom Nyrt.</pre>
     </footer>
 </body>
 

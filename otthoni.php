@@ -44,16 +44,22 @@
                         echo "<li><a class=\"account\" href=\"login.php\">Belépés</a></li>";
                     }
                 ?>
-                <li class="account"><a href="#">
+                <li class="account" >
                     <?php
                         if(isset($_SESSION["login"])){
+                            echo "<a style=\"padding:12px\" href=\"#\">";
+                            echo "<img style=\"margin-right: 10px\" width=\"40\" height=\"40\" alt=\"Profilkép\" src=\"pics/". $login->getProfPic()."\">";
+
                             echo $login->username;
+                            echo "</a>";
                         }
                         else{
+                            echo "<a href=\"#\">";
                             echo "Nem vagy belépve!";
+                            echo "</a>";
                         }
                     ?>
-                </a></li>
+                </li>
             </ul>
         </div>
     </nav>
@@ -182,6 +188,7 @@
                         <input type="radio" id="telefon3" name="telefon" value="l" <?=$login->checked("home", "telephone", "l")?>>
                     </div>
                 </div>
+                <input type="hidden" value="home" id="service" name="service">
                 <?php
                     if($login->username){
                         echo "<div class=\"table_td_gomb\">

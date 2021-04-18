@@ -12,6 +12,10 @@ class UserManager{
     public $username = "";
 
     function __construct(){
+        $this->getChanges();
+    }
+
+    function getChanges(){
         try{
             if(!file_exists(__DIR__."\..\data\users.data")){
                 throw new RuntimeException("Az adatbázis nem található!");
@@ -88,11 +92,11 @@ class UserManager{
                 $user["services"][$segment][$service] = $value;
             }
         }
-        print_r($this->users);
         $this->pushChanges();
     }
 
     function getService($segment, $service){
+        $this->getChanges();
         foreach($this->users as $user){
             if($user["username"] == $this->username){
                 return $user["services"][$segment][$service];

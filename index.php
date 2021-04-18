@@ -42,17 +42,22 @@
                         }
                         ?>
                     </li>
-                    <li class="account"><a href="#">
+                    <li class="account" >
                     <?php
                         if(isset($_SESSION["login"])){
-                            echo "<img style=\"margin-right: 10px\" width=\"32px\" height=\"32px\" src=\"pics/". $login->getProfPic()."\">";
-                            echo "<label>".$login->username."</label>";
+                            echo "<a style=\"padding:12px\" href=\"#\">";
+                            echo "<img style=\"margin-right: 10px\" width=\"40\" height=\"40\" alt=\"Profilkép\" src=\"pics/". $login->getProfPic()."\">";
+
+                            echo $login->username;
+                            echo "</a>";
                         }
                         else{
+                            echo "<a href=\"#\">";
                             echo "Nem vagy belépve!";
+                            echo "</a>";
                         }
                     ?>
-                    </a></li>
+                    </li>
                 </ul>
             </div>
         </nav>
