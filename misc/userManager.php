@@ -10,6 +10,7 @@ class UserManager{
 
     public $users;
     public $username = "";
+    public $profile_pic;
 
     function __construct(){
         $this->users = unserialize(file_get_contents(__DIR__."\..\data\users.data"));
@@ -36,7 +37,7 @@ class UserManager{
         return false;
     }
 
-    function register($username, $password){
+    function register($username, $password, $image){
         $date = new DateTime();
         $date->setTimezone(new DateTimeZone("Europe/Budapest"));
         $user = [
@@ -55,6 +56,17 @@ class UserManager{
                 ]
             ]
         ];
+        $allowed = ["jpg", "jpeg", "png"];
+        $extension = strtolower(pathinfo($image["name"], PATHINFO_EXTENSION));
+        if (in_array($extension, $allowed)) {
+            if ($image["error"] === 0) {
+                if ($image["size"] <= 31457280) {
+                    $target = "../pics/" . $username.".".$extension;
+                    $this->profile_pic = $username.".".$extension;
+                    move_uploaded_file($image["tmp_name"], $target);
+                }
+            }
+        }
         if(!$this->users) {
             $this->users = [];
         }

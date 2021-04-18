@@ -59,12 +59,12 @@
                     <label for="user1">Felhasználónév: </label>
                     <input type="text" name="user" id="user1" required><br>
                     <label for="pass1">Jelszó:</label>
-                    <input type="password" name="pass" id="pass1" required><br>
+                    <input type="password" name="pass" id="pass1" required minlength="8"><br>
                 </fieldset>
             </div>
             <input type="submit" class="myGomb" value="Bejelentkezés">
         </form>
-        <form action="misc/register.php" method="post" style="float:right">
+        <form action="misc/register.php" method="post" style="float:right" enctype="multipart/form-data">
             <figure>
                 <img src="kepek/prof.png" width="150">
                 <figcaption>Regisztráció</figcaption>
@@ -80,9 +80,9 @@
                     <label for="user2">Felhasználónév: </label>
                     <input type="text" name="user" id="user2" required><br>
                     <label for="pass">Jelszó: </label>
-                    <input type="password" name="pass" id="pass" placeholder="legalább 8 karakter" required><br>
+                    <input type="password" name="pass" id="pass" placeholder="legalább 8 karakter" required minlength="8"><br>
                     <label for="pass2">Ismételt jelszó:</label>
-                    <input type="password" name="pass2" id="pass2" placeholder="legalább 8 karakter" required><br>
+                    <input type="password" name="pass2" id="pass2" placeholder="legalább 8 karakter" required minlength="8"><br>
                     <label for="profile_pic">Profilkép:</label>
                     <input type="file" name="profile_pic" id="profile_pic" required><br>
                     <input type="hidden" name="source" value="internet">

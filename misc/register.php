@@ -4,10 +4,12 @@
     $username = $_POST["user"];
     $password = $_POST["pass"];
     $password_again = $_POST["pass2"];
+    $profile_pic = $_FILES["profile_pic"];
 
     if( empty($username) ||
         empty($password) ||
-        empty($password_again)
+        empty($password_again) ||
+        empty($_FILES["profile_pic"])
     ){
         header("Location: /vodakom/login.php?error=reg_empty");
         die();
@@ -32,7 +34,8 @@
 
     $login->register(
         $username,
-        $password
+        $password,
+        $profile_pic
     );
     $login->login(
         $username,

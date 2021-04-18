@@ -45,7 +45,8 @@
                     <li class="account"><a href="#">
                     <?php
                         if(isset($_SESSION["login"])){
-                            echo $login->username;
+                            echo "<img style=\"margin-right: 10px\" width=\"32px\" height=\"32px\" src=\"pics/". $login->profile_pic."\">";
+                            echo "<label>".$login->username."</label>";
                         }
                         else{
                             echo "Nem vagy belépve!";
